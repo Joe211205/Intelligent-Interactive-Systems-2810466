@@ -39,9 +39,7 @@ def load():
             meta, body = _front_matter(f.read())
         for para in [p.strip() for p in body.split("\n\n") if p.strip()]:
             out.append({"file": name, "source": meta.get("source", name), "section": meta.get("section", ""),
-                        "date": meta.get("updated", "unknown"),
-                        "superseded": meta.get("superseded", "false").lower() == "true",
-                        "text": " ".join(para.split())})
+                        "date": meta.get("updated", "unknown"), "text": " ".join(para.split())})
     return out
 
 
@@ -70,6 +68,8 @@ def retrieve(question, k=3, passages=None):
             if w in pw:
                 idf = math.log((n + 1) / (df.get(w, 0) + 1)) + 1
                 score += idf * (pw.count(w) / len(pw)) ** 0.5
+        if "superseded" in p.get("source", "").casefold():
+            score *= 0.5
         hit = dict(p)
         hit["score"] = round(score / (len(set(q)) ** 0.5), 3)
         hits.append(hit)
@@ -92,6 +92,5 @@ if __name__ == "__main__":
         sys.exit(0)
     q = " ".join(a for a in sys.argv[1:] if not a.startswith("--")) or "when is coursework 1 due"
     for h in retrieve(q, k=3):
-        status = " [SUPERSEDED]" if h["superseded"] else ""
-        print("%.2f  %s %s  %s%s" % (h["score"], h["file"], h["section"], h["date"], status))
+        print("%.2f  %s %s  %s" % (h["score"], h["file"], h["section"], h["date"]))
         print("      \"%s\"" % (h["text"][:70] + ("..." if len(h["text"]) > 70 else "")))

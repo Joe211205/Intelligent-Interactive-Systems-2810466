@@ -1,6 +1,9 @@
+# nothing secret belongs in this repository; these are local by-products
 .env
 *.key
+schedule.json
+tool_log.jsonl
+*.bak
 __pycache__/
-.venv/
-venv/
-.DS_Store
+*.pyc
+runs/

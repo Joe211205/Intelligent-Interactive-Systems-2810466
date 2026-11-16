@@ -1,0 +1,17 @@
+Task:
+Make the current handbook outrank the superseded 2024 handbook for late-submission penalty queries.
+
+Completion condition:
+python run_tests.py
+python retrieve.py "what is the penalty for late submission"
+
+Tool boundary:
+May edit retrieval and ranking code.
+May read corpus files, tests and starter files.
+corpus/ is read-only.
+Must not edit files inside corpus/
+Must not modify handbook documents.
+Must not invent new requirements or change unrelated files
+
+Phase 4 plan change:
+Added a retrieval verification step before running the full test suite.
