@@ -1,6 +1,6 @@
 # Explainable AI assistant
 
-README word count:326
+README word count: 344
 
 An AI assistant made to increase transparency and trust by giving evidence-backed responses, clarification mechanisms and uncertainty handling.
 
@@ -70,11 +70,13 @@ Planned features:
 - documented agent behaviour, development evidence and planning.
 
 ## AI assistance
-AI tools were used to help with:
+ChatGPT was used to help with:
 - brainstorming design ideas
 - Reviewing implementation approaches
 - Clarifying technical concepts
 - supporting report preparation and documentation
+
+GitHub Copilot was used to review the supplied code and support development, as required during the labs.
 
 All generated content was reviewed, checked and edited before inclusion in the final project.
 
