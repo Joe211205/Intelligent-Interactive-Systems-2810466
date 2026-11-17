@@ -1,11 +1,10 @@
 # Explainable AI assistant
 
-README word count: 344
-
 An AI assistant made to increase transparency and trust by giving evidence-backed responses, clarification mechanisms and uncertainty handling.
 
 ## Project Status
 This project explores how transparency and explainability can help users find mistakes in AI generated responses.
+The submitted prototype uses the supplied mock model by default. A live model endpoint can be configured separately but is not configured in this submission. Image-query examples demonstrate confidence-aware behaviour using supplied sample results.
 
 Implemented features:
 - Conversational question and answer interface
@@ -13,7 +12,7 @@ Implemented features:
 - Retrieval of information from a document corpus
 - Clarification for ambiguous requests
 - Refusal of unsupported or unanswerable questions
-- Uncertainty and confidence handling 
+- Uncertainty indication through retrieval relevance scores and confidence-aware image-query examples
 - Tool validation and confirmation before execution
 
 Simulated features:
