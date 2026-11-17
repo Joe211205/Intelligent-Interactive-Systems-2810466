@@ -1,6 +1,6 @@
 # Explainable AI assistant
 
-README word count:296
+README word count:326
 
 An AI assistant made to increase transparency and trust by giving evidence-backed responses, clarification mechanisms and uncertainty handling.
 
@@ -13,7 +13,7 @@ Implemented features:
 - Retrieval of information from a document corpus
 - Clarification for ambiguous requests
 - Refusal of unsupported or unanswerable questions
-- Uncertainty and confidence handling
+- Uncertainty and confidence handling 
 - Tool validation and confirmation before execution
 
 Simulated features:
@@ -25,13 +25,13 @@ Planned features:
 - Improved confidence calibration
 
 ## Technology stack
-- Python
-- HTML
-- Retrieval module (`retrieve.py`)
-- JavaScript
-- Tool validation module (`tools.py`)
-- vision-language module (`vlm.py`)
-- GitHub for version control and project hosting
+- Python: Main application logic and backend processing.
+- HTML: structure of the web interface.
+- Retrieval module (`retrieve.py`): Searches the document corpus for relevant supporting information.
+- JavaScript: Frontend interaction with the assistant.
+- Tool validation module (`tools.py`): handles proposed actions, validation and user confirmation
+- vision-language module (`vlm.py`): Supports image-based queries.
+- GitHub: version control and project hosting
 
 ## Running the Project
 
